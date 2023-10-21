@@ -22,7 +22,7 @@ const useHasMounted = () => {
 
 const useWindowWidth = () => {
   const hasMounted = useHasMounted()
-  const [width, setWidth] = useState(0)
+  const [width, setWidth] = useState(window.innerWidth ? window.innerWidth : 0)
 
   const handleResize = useCallback(() => {
     if (!hasMounted) return
